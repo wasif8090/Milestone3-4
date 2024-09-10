@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app.ts">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Resume Builder</h1>
+        <form id="resumeForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <textarea id="experience" name="experience" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="picture">Profile Picture:</label>
+                <input type="file" id="picture" name="picture" accept="image/*">
+            </div>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+            <button type="button" id="editButton" style="display:none;" onclick="editResume()">Edit Resume</button>
+            <button type="button" id="downloadButton" style="display:none;" onclick="downloadResume()">Download Resume</button>
+        </form>
+
+        <div id="resumeOutput" class="resume-output">
+            <!-- Generated resume will appear here -->
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
